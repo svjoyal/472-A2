@@ -12,3 +12,5 @@ Open all .py files in your editor of choice. In case of issues, Spyder (anaconda
 3. Run A2_Analysis.py*. This will generate a spreadsheet called 'Analysis.xlsx' containing details about the execution of each puzzle in the 'Analysis_Tests.txt' file.
 
 The files generated after taking these steps should be the following: 'A2output' folder containing all 18 search and sol files for the output portion of the assignment, and an 'Analysis.xlsx' spreadsheet containing data pertaining to execution of each puzzle in 'Analysis_Tests.txt'.
+
+<sub>* This will take some time.</sub>
