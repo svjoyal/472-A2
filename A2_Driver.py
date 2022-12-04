@@ -9,7 +9,7 @@ import A2_SearchFunctions as search
 
 testboard = func.parse_file('sample-input.txt')
 
-h = [search.h0, search.h1, search.h2, search.h3, search.h4]
+h = [search.NA, search.h1, search.h2, search.h3, search.h4]
 
 for i in range(len(testboard)):
     

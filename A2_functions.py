@@ -210,7 +210,7 @@ def doc_solution(searchType, num, runtime, search_length, solution_path, init_pu
         print("", file=f)
         
         for i in range(len(sol_path)):
-            print(f'{moves_output[i]}\t{sol_path[i]}', file=f)
+            print(f'{moves_output[i][0]: <1}{moves_output[i][1:]: >10}\t{sol_path[i]: ^20}', file=f)
             
         print("", file=f)
         

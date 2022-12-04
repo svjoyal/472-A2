@@ -63,6 +63,7 @@ def Search(searchtype, puzzle, h, num):
         else:
             func.doc_search(f'{searchtype}-{h.__name__}', num, fval, gval, hval, search_output)
         
+        
         if data.is_solved(): #Check if popped node is solved
             break
 
@@ -80,25 +81,25 @@ def Search(searchtype, puzzle, h, num):
                 c_priority = h(p) + len(child_path)
 
             if str(p) not in closed:
-                openlist.push(c_priority, [p, child_path, child_moves])
                 closed.add(str(p))
-                
-            elif c_priority < closed_dict[str(p)]:
-                openlist.push(c_priority, [p, child_path, child_moves])
-                
-            closed_dict[str(p)] = c_priority
-                    
+                openlist.push(c_priority, [p, child_path, child_moves])    
+                closed_dict[str(p)] = c_priority
+            else:
+                if c_priority < closed_dict[str(p)]:
+                    openlist.push(c_priority, [p, child_path, child_moves])    
+                    closed_dict[str(p)] = c_priority
+
     end = time.time()
     time_taken = end - start
     
     print(f'{searchtype.upper()} search with heuristic {h.__name__} for board #{num} done')
     #Generate solution file
-    return searchtype,num,round(time_taken,2),len(closed),[moves,path],puzzle,openlist.empty()
+    return f'{searchtype}-{h.__name__}', num, round(time_taken,2), len(closed), [moves,path], puzzle, openlist.empty()
     
 
 
 #UCS heuristic
-def h0(n):
+def NA(n):
     return 0
 
 #Blocking cars

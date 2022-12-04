@@ -15,7 +15,7 @@ def analyze(analysis_dict):
     xlwriter.close()
 
 analysisboards = func.parse_file('Analysis_Tests.txt')
-h = [search.h0, search.h1, search.h2, search.h3, search.h4]
+h = [search.NA, search.h1, search.h2, search.h3, search.h4]
 
 analysis_dict = {
     "Puzzle Number":[],
@@ -31,7 +31,7 @@ for i in range(len(analysisboards)):
     sol = search.Search('ucs', analysisboards[i], h[0], i+1)
     analysis_dict["Puzzle Number"].append(sol[1])
     analysis_dict["Algorithm"].append(sol[0].upper())
-    analysis_dict["Heuristic"].append("NA")
+    analysis_dict["Heuristic"].append(h[0].__name__)
     analysis_dict["Length of the Solution"].append(len(sol[4][0]))
     analysis_dict["Length of the Search Path"].append(sol[3])
     analysis_dict["Execution Time (in seconds)"].append(sol[2])

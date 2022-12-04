@@ -66,15 +66,14 @@ class Board(object):
         return not self.__eq__(other)
     
     def __str__(self):
-        return str(self.get_puzzle()[0])
+        return self.get_puzzle()[0]
 
     def __hash__(self):
         return hash(self.__repr__())
     
     
     def get_puzzle(self):
-        str_board, board = func.gen_board(self.carlist)
-        return str_board, board
+        return func.gen_board(self.carlist)
 
     def is_solved(self):
         solved = False
