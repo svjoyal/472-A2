@@ -11,6 +11,6 @@ Open all .py files in your editor of choice. In case of issues, Spyder (anaconda
 2. Once execution of A2_Driver is complete, go to A2_SearchFunctions.py and comment out lines 58-64 inclusively so that no search files are generated for the analysis portion of the assignment. 
 3. Run A2_Analysis.py*. This will generate a spreadsheet called 'Analysis.xlsx' containing details about the execution of each puzzle in the 'Analysis_Tests.txt' file.
 
-The files generated after taking these steps should be the following: 'A2output' folder containing all 18 search and sol files for the output portion of the assignment, and an 'Analysis.xlsx' spreadsheet containing data pertaining to execution of each puzzle in 'Analysis_Tests.txt'.
+The files generated after taking these steps should be the following: 'A2output' folder containing all 18 search and sol files for each puzzle in 'sample-input.txt', and an 'Analysis.xlsx' spreadsheet containing data pertaining to execution of each puzzle in 'Analysis_Tests.txt'.
 
 <sub>* This will take some time.</sub>
